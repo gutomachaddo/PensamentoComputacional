@@ -1,0 +1,444 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPpAS0VbFKgceA0Mu3AfDmH"
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# 1. Faça um algoritmo em Python para ler dois valores numéricos e apresentar a diferença do maior pelo menor."
+      ],
+      "metadata": {
+        "id": "j756gYmZtDes"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "5vS1N8R2sM5D",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5716001c-9764-4433-db52-c4060e14a172"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escreva um numero qualquer:4\n",
+            "Escreva outro:5\n",
+            "A diferença do maior pelo menor é 1.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Algoritmo que faça a diferença do maior pelo menor\n",
+        "\n",
+        "# Variáveis\n",
+        "\n",
+        "num1 = 0.0\n",
+        "num2 = 0.0\n",
+        "sub = 0.0\n",
+        "\n",
+        "# Inicio\n",
+        "\n",
+        "num1 = float(input('Escreva um numero qualquer:'))\n",
+        "num2 = float(input('Escreva outro:'))\n",
+        "if num1 >= num2:\n",
+        "  sub = num1 - num2\n",
+        "  print('A diferença do maior pelo menor é {}'.format(sub))\n",
+        "else:\n",
+        "  sub = num2 - num1\n",
+        "  print('A diferença do maior pelo menor é {}'.format(sub))\n",
+        "\n",
+        "# Fim."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# 2. Faça um algoritmo em Python para ler dois números. Se os números forem iguais escrever a mensagem: \"NÚMEROS IGUAIS\" e encerrar a execução; caso contrário, escrever o de maior valor."
+      ],
+      "metadata": {
+        "id": "sXGe67CjuYpy"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Algoritmo que leia dois números e diga o maior, ou diga que eles são iguais\n",
+        "\n",
+        "# Variáveis\n",
+        "\n",
+        "n1 = 0.0\n",
+        "n2 = 0.0\n",
+        "\n",
+        "# Inicio\n",
+        "\n",
+        "n1 = float(input('Escreva um número:'))\n",
+        "n2 = float(input('Escreva outro:'))\n",
+        "\n",
+        "if n1 > n2:\n",
+        "  print('O maior número é {}'.format(n1))\n",
+        "elif n1 < n2:\n",
+        "  print('O maior número é {}'.format(n2))\n",
+        "else:\n",
+        "  print('Você digitou números IGUAIS')\n",
+        "\n",
+        "# Fim"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "96a_ABQRudar",
+        "outputId": "325fe5cd-f477-40a4-c640-d4249af11bc0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escreva um número:5\n",
+            "Escreva outro:5\n",
+            "Você digitou números IGUAIS\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# 3. Faça um algoritmo em Python para ler dois valores: NUM1 e NUM2, e se NUM1 for maior que NUM2 executa a soma de NUM1 e NUM2; caso contrário, executa uma subtração."
+      ],
+      "metadata": {
+        "id": "zfKwmen3w1uw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Algoritmo que leia dois números e faça ou a soma de n1 por n2 ou a subtração dos mesmos\n",
+        "\n",
+        "# Variáveis\n",
+        "\n",
+        "n1 = 0.0\n",
+        "n2 = 0.0\n",
+        "\n",
+        "# Inicio\n",
+        "\n",
+        "n1 = float(input('Escreva um número:'))\n",
+        "n2 = float(input('Escreva outro:'))\n",
+        "if n1 > n2:\n",
+        "  print('A soma entre {} e {} é {}'.format(n1, n2, n1 + n2))\n",
+        "elif n1 < n2:\n",
+        "  print('A subtração de {} por {} é {}'.format(n1, n2, n1 - n2))\n",
+        "else:\n",
+        "  print('NUMEROS IGUAIS')\n",
+        "\n",
+        "# Fim."
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hcUx9djEw8YP",
+        "outputId": "521dc5ee-f6c7-46a0-ef54-e8290b699400"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escreva um número:5\n",
+            "Escreva outro:5\n",
+            "NUMEROS IGUAIS\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# 4. O hotel Pica-Pau cobra R$ 150,00 a diária e mais uma taxa de serviços. A taxa de serviços é de:\n",
+        "\n",
+        " ● R$ 15 por dia, se número de diárias <15\n",
+        "\n",
+        " ● R$ 10 por dia, se número de diárias =15\n",
+        "\n",
+        " ● R$ 5 por dia, se número de diárias >15"
+      ],
+      "metadata": {
+        "id": "otJe-3V_x9im"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Algoritmo que calcule a taxa de serviços de um hotel\n",
+        "\n",
+        "# Variáveis\n",
+        "\n",
+        "preco = 150 # R$\n",
+        "dias = 0\n",
+        "\n",
+        "# Inicio\n",
+        "\n",
+        "dias = int(input('Quantos dias você deseja ficar hospedado no hotel?'))\n",
+        "if dias < 15:\n",
+        "  print(\"A taxa de serviços ficará no preço de R$ {}\".format((dias * 15) + preco))\n",
+        "elif dias > 15:\n",
+        "  print(\"A taxa de serviços ficará no preço de R$ {}\".format((dias * 5) + preco))\n",
+        "else:\n",
+        "  print(\"A taxa de serviços ficará no preço de R$ {}\".format((dias * 10) + preco))\n",
+        "\n",
+        "# Fim."
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qFD4Gf3lyD_N",
+        "outputId": "1537cb6f-ab1e-401f-bcab-4576553db867"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Quantos dias você deseja ficar hospedado no hotel?20\n",
+            "A taxa de serviços ficará no preço de R$ 250\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# 5. Escrever um programa em Python que lê as 3 notas obtidas por ele em provas. Para cada aluno, calcular a média de aproveitamento, usando a fórmula:\n",
+        "\n",
+        "MA = (Nl + N2 + N3)\n",
+        "3\n",
+        "\n",
+        "A atribuição de conceitos obedece à tabela abaixo:\n",
+        "Média de Aproveitamento Conceito\n",
+        "\n",
+        ">= 9.0 A\n",
+        "\n",
+        ">= 7.5 e < 9.0 B\n",
+        "\n",
+        ">= 6.0 e < 7.5 C\n",
+        "\n",
+        ">= 4.0 e < 6.0 D\n",
+        "\n",
+        " < 4.0 E\n",
+        "\n",
+        "\n",
+        "O programa deve escrever as notas, a média de aproveitamento, o conceito\n",
+        "correspondente e a mensagem: \"APROVADO\" se o conceito for A, B, ou C e\n",
+        "\"REPROVADO\" se conceito for D ou E."
+      ],
+      "metadata": {
+        "id": "ydjIMmNhz9Qd"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Algoritmo que faça a média de 3 notas de um aluno e diga em qual conceito ele está aprovado ou reprovado\n",
+        "\n",
+        "# Variáveis\n",
+        "\n",
+        "n1 = 0.0\n",
+        "n2 = 0.0\n",
+        "n3 = 0.0\n",
+        "media = 0.0\n",
+        "\n",
+        "# Inicio\n",
+        "\n",
+        "n1 = float(input('Escreva a primeiro nota:'))\n",
+        "n2 = float(input('Escreva a segunda nota:'))\n",
+        "n3 = float(input('Escreva a terceira nota:'))\n",
+        "media = (n1 + n2 + n3) / 3\n",
+        "\n",
+        "if media >= 9:\n",
+        "  print('O aluno está aprovado com conceito A!')\n",
+        "elif media >= 7.5:\n",
+        "  print('O aluno está aprovado com conceito B!')\n",
+        "elif media >= 6:\n",
+        "  print('O aluno está aprovado com conceito C!')\n",
+        "elif media >= 4:\n",
+        "  print('O aluno está reprovado com conceito D!')\n",
+        "else:\n",
+        "  print('O aluno está reprovado com conceito E!')\n",
+        "\n",
+        "# Fim."
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IEL3vhq30Ta8",
+        "outputId": "34e7a113-9a8f-45cf-847f-6fb6ea66c9d4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escreva a primeiro nota:2\n",
+            "Escreva a segunda nota:1\n",
+            "Escreva a terceira nota:2\n",
+            "O aluno está reprovado com conceito E!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# 6. Faça um programa em Python que leia a altura e o sexo de uma pessoa, calcule seu peso ideal, utilizando as seguintes fórmulas:\n",
+        "\n",
+        "● homens : (72,7*altura) –58\n",
+        "\n",
+        "● mulheres : (62,1*altura) – 44,7"
+      ],
+      "metadata": {
+        "id": "D5s-Asry2CUY"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Algoritmo que calcule o peso ideal de acordo com o sexo\n",
+        "\n",
+        "# Variáveis\n",
+        "\n",
+        "altura = 0.0\n",
+        "sexo = \"0\"\n",
+        "peso = 0.0\n",
+        "\n",
+        "# Inicio\n",
+        "\n",
+        "sexo = str(input(\"Qual o seu sexo? digite 'M' para masculino e 'F' para feminino:\"))\n",
+        "altura = float(input('Qual a sua altura?'))\n",
+        "if sexo == 'M':\n",
+        "  peso = 72.7 * altura - 58\n",
+        "  print('O seu peso ideal é {}'.format(round(peso, 2)))\n",
+        "elif sexo == 'F':\n",
+        "  peso = 62.1 * altura - 58\n",
+        "  print('O seu peso ideal é {}'.format(round(peso, 2)))\n",
+        "else:\n",
+        "  print('Você não digitou \"M\" ou \"F\"!')\n",
+        "\n",
+        "# Fim."
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lfHf8yMy2Hr_",
+        "outputId": "bca78d0e-8b77-48cf-8664-ef94aa0627b9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Qual o seu sexo? digite 'M' para masculino e 'F' para feminino:F\n",
+            "Qual a sua altura?1.8\n",
+            "O seu peso ideal é 53.78\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# 7. Escrever um programa em Python que lê os seguintes dados de um funcionário: o número de horas trabalhadas e o valor que recebe por hora. Calcular e escrever, o salário bruto (SB) e o valor de desconto do Imposto de Renda (IR) como segue:\n",
+        "\n",
+        "● Se SB > 3.500,00 então IR = 15% do SB\n",
+        "\n",
+        "● Se SB > 1.500,00 e SB <= 3.500,00 então IR = 8% do SB\n",
+        "\n",
+        "● Se SB <= 1.500,00 então IR = 0."
+      ],
+      "metadata": {
+        "id": "q_TlK-vu3-jX"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Algoritmo que leia as horas e o valor por hora de trabalho e escreva o salario bruto e o valor de desconto de IR\n",
+        "\n",
+        "# Variáveis\n",
+        "\n",
+        "horas = 0.0 # h\n",
+        "valor_hora = 0.0 # R$\n",
+        "SB = 0.0 # R$\n",
+        "desconto = 0.0 # R$\n",
+        "SL = 0.0 # R$\n",
+        "\n",
+        "# Inicio\n",
+        "\n",
+        "horas = float(input('Escreva quantas horas você trabalha por mês: '))\n",
+        "valor_hora = float(input('Escreva qual o valor da sua hora de trabalho: '))\n",
+        "SB = horas * valor_hora\n",
+        "if SB > 3500:\n",
+        "  desconto = SB * 0.15\n",
+        "  SL = SB - desconto\n",
+        "  print('O valor do Salário bruto é {}, com desconto de {}, ficando \\n um salário líquido de {}'.format(SB, desconto, SL))\n",
+        "elif SB > 1500 and SB <= 3500:\n",
+        "  desconto = SB * 0.08\n",
+        "  SL = SB - desconto\n",
+        "  print('O valor do Salário bruto é {}, com desconto de {}, ficando \\n um salário líquido de {}'.format(SB, desconto, SL))\n",
+        "else:\n",
+        "  desconto = SB * 1\n",
+        "  print('O valor do Salário bruto é {}, com desconto de {}, ficando \\n um salário líquido de {}'.format(SB, desconto, SL))\n",
+        "\n",
+        "\n",
+        "# Fim."
+      ],
+      "metadata": {
+        "id": "-yuWP-uY4EIO",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "73058960-4736-41e0-bcfd-1b22509e5e7e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escreva quantas horas você trabalha por mês: 160\n",
+            "Escreva qual o valor da sua hora de trabalho: 80\n",
+            "O valor do Salário bruto é 12800.0, com desconto de 1920.0, ficando \n",
+            " um salário líquido de 10880.0\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

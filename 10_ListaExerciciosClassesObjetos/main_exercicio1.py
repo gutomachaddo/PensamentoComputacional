@@ -1,6 +1,6 @@
 # from models.Veiculos import Veiculos
 
-from models.Livro import Livro
+from models_exercicio1.Livro import Livro
 
 senhor_aneis = Livro('Senhor dos Anéis', 'Tolkien', '29/07/1954', 576, 10)
 

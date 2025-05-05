@@ -14,22 +14,24 @@ class Veiculos:
         self.velocidade += 10
         nova_latitude = self.latitude + 1
         self.alterar_latitude(nova_latitude)
-        print(f'O carro de placa {self.placa} foi acelerado até {self.velocidade} km/h')
+        print(
+            f'O carro de placa {self.placa} foi acelerado até {self.velocidade} km/h')
 
     def frenar(self):
 
-        if self.velocidade > 10:
+        if self.velocidade >= 10:
             self.velocidade -= 10
 
     def mostrarInfos(self):
 
-        print(f"O veículo {self.modelo}, de placa {self.placa} está a {self.velocidade} km/h")
-        print(f"Lat: {self.latitude}, long: {self.longitude}")   
+        print(
+            f"O veículo {self.modelo}, de placa {self.placa} está a {self.velocidade} km/h")
+        print(f"Lat: {self.latitude}, long: {self.longitude}")
 
     def alterar_placa(self, placa):
 
         self.placa = placa
-    
+
     def alterar_modelo(self, modelo):
 
         self.modelo = modelo
@@ -37,7 +39,7 @@ class Veiculos:
     def alterar_marca(self, marca):
 
         self.marca = marca
-    
+
     def alterar_ano(self, ano):
 
         self.ano = ano

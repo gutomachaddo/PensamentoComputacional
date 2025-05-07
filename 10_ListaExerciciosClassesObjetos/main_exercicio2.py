@@ -1,12 +1,9 @@
 from models_exercicio2.conta_banco import conta_banco
 
-conta = conta_banco('Alfredo Neto', 1000, 500, [])
-conta_destino = conta_banco('Joaquim Neto', 500, 300, [])
+guilherme = conta_banco('Guilherme', 1000, 500, [])
+guilherme.depositar(50)
+pedro = conta_banco('Pedro', 500, 300, [])
 
-
-conta.depositar(150)
-conta.exibir_historico()
-conta.sacar(100)
-conta.exibir_historico()
-conta.transferir(50)
-conta_destino.exibir_historico()
+guilherme.transferir(pedro, 50)
+guilherme.exibir_historico()
+pedro.exibir_historico()

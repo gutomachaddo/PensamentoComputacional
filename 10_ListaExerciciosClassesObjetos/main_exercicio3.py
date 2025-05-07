@@ -1,6 +1,5 @@
 from models_exercicio3.filme import filme
 
-<<<<<<< HEAD
 matrix = filme('Matrix', 'Ficção Científica', 136, 0.0 )
 
 while True:
@@ -13,5 +12,4 @@ while True:
 
 matrix.avaliar(nota)
 matrix.exibir_informacoes()
-=======
->>>>>>> 4b2a2dc2f6157151785656a00e32a28e2f722746
+

@@ -1,63 +1,97 @@
+import time
+
 class conta_banco:
-    
-    def __init__(self, titular, saldo, limite, historico, n_vezes):
+
+    '''
+    Classe que implementa métodos para manipular uma conta bancária.add()
+    Atributos: titular (str), saldo (float), limite (float), e histórico (lista de dicionários)
+
+    OBS: Operações no histórico: 0 - sacar, 1- depositar, 2 - transferir
+
+    '''
+
+    def __init__(self, titular, saldo, limite, historico):
 
         self.titular = titular
         self.saldo = saldo
         self.limite = limite
         self.historico = historico 
-        self.n_vezes = n_vezes
 
+        '''
+        Construtor da classe conta_banco
+        '''
+    
     def depositar(self, valor):
-<<<<<<< HEAD
-=======
+        '''
+        Método que realiza o depósito na conta bancária
+        Entrada: Valor (float)
+        Return: True (se a operação foi realizada com sucesso.)
+                False (se a operação não foi realizada.)
+        '''
+
         if valor > 0:
             self.saldo += valor
+            self.historico.append({'operacao': 0,
+                                   'remetente': self.titular,
+                                    'destinatario': None, 
+                                    'valor': valor,
+                                    'saldo': self.saldo,
+                                    'data/tempo': int(time.time())})
+            return True
         else:
             print(f'O valor {valor} é inválido')
+            return False
 
-    def sacar(self, valor): # valor so acessado dentro do metodo sacar 
+    def sacar(self, valor): 
+        '''
+        Método que realiza o saque da conta bancária
+        Entrada: Valor (float)
+        Return: True (se a operação foi realizada com sucesso.)
+                False (se a operação não foi realizada.)
+        '''
+                
         if valor <= self.saldo:
             self.saldo -= valor
+            self.historico.append({'operacao': 1,
+                                   'remetente': self.titular,
+                                    'destinatario': None, 
+                                    'valor': valor,
+                                    'saldo': self.saldo,
+                                    'data/tempo': int(time.time())})
             print('saque realizado!')
-        else: # Sem grana em conta e irá acessar o limite
+            return True
+        else: 
             a = input(f"deseja utilizar o limite de R$ {self.limite}? (s) para continuar")
             if a == 's':
                 if (self.saldo + self.limite) >= valor:
                     self.saldo -= self.limite
                     print('saque realizado!')
+                    return True
                 else:
                     print('Saldo e limite insuficientes!')
             else:
                 print('Operação com limite cancelada!')
 
-
-    def transferir(self):
-
     def exibir_historico(self):
-   
-    def exibir_saldo(self):
-        
-        
+        print('Histórico de transações:')
+        print('_'*150)
+        for item in self.historico:
+            dt = time.localtime(item['data/tempo'])
+            print('Op:', item['operacao'],
+                  '\n . Remetente:', item['remetente'],
+                  '\n . Destinatário:', item['destinatario'],
+                  '\n . Saldo:', item['saldo'],
+                  '\n . Valor:', item['valor'],
+                  '\n . Data e Tempo:',
+                  str(dt.tm_hour) + ':' + str(dt.tm_min) + ':' + str(dt.tm_sec) + ' / DIA:' + str(dt.tm_mday) + ' MÊS:' + str(dt.tm_mon) + ' ANO:' + str(dt.tm_year))
 
-
->>>>>>> 4b2a2dc2f6157151785656a00e32a28e2f722746
-
-        self.saldo += valor
-        self.n_vezes += 1
-        self.historico.append([f'O titular {self.titular}, depositou {self.n_vezes} vez(es) o valor de R$ {valor}'])
-
-    def sacar(self, valor1):
-
-        if self.saldo >= valor1:
-            self.saldo -= valor1
-        
-        else:
-            if (self.saldo + self.limite) > valor1:
-                resposta = str(input('Você deseja utilizar o limite? Digite(s) para usar: '))
-                if resposta == 's':
-                    self.saldo -= valor1
+    def transferir(self, valor):
+        if self.saldo >= valor:
+            self.saldo -= valor
             
-                else:
-                    print('Sessão encerrada!')
-    
+
+        else:
+            print('Você não possui saldo suficiente!')
+        
+               
+        

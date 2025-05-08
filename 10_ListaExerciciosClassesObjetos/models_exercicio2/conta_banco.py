@@ -106,5 +106,4 @@ class conta_banco:
                 '\n . Data e Tempo:',
                 str(dt.tm_hour) + ':' + str(dt.tm_min) + ':' + str(dt.tm_sec) + ' / DIA:' + str(dt.tm_mday) + ' MÊS:' + str(dt.tm_mon) + ' ANO:' + str(dt.tm_year))
 
-
        

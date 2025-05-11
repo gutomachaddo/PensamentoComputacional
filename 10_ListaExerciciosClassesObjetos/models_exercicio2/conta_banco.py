@@ -95,7 +95,6 @@ class conta_banco:
 
     def exibir_historico(self):
         print('Histórico de transações:')
-        print('_'*150)
         for item in self.historico:
             dt = time.localtime(item['data/tempo'])
             print('Op:', item['operacao'],

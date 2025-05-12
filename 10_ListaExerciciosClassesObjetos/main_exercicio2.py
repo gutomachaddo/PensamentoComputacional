@@ -8,6 +8,9 @@ resposta = ''
 
 print('_' * 15)
 print('\033[1;34m SERVIÇOS DO BANCO:\033[m')
+print('-'*15)
+print('CARREGANDO SERVIÇOS...')
+sleep(2)
 print('\n \033[1;36mSEJA BEM VINDO! Como podemos lhe ajudar hoje?\033[m')
 
 while resposta != '8':

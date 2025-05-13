@@ -26,7 +26,7 @@ while resposta != '8':
             print('\033[1;31mEste nome já está sendo utilizado!\033[m\nDigite um nome diferente para realizar o cadastro.')
         else:
             contas.append(conta_banco(nome, saldo, limite, []))
-            print(f'\033[1;32mConta criada com sucesso para {nome}!\033[m')
+            print(f'\033[1;32mConta criada com sucesso para o titular\033[m \033[1;36;46m{nome}\033[m!')
 
     elif resposta == '2':
         titular = str(input('Insira o nome do titular da conta: '))
@@ -122,7 +122,7 @@ while resposta != '8':
     elif resposta == '8':
         print('FINALIZANDO...')
         sleep(2)
-        print('OS SERVIÇOS DO BANCO FORAM FINALIZADOS!')
+        print('\033[1;36mOS SERVIÇOS DO BANCO FORAM FINALIZADOS!\033[m')
 
     else:
         print('Procurando serviço...')

@@ -21,7 +21,12 @@ while resposta != '8':
         nome = str(input('Escreva o nome do titular: '))
         saldo = float(input('O saldo inicial que será adicionado: '))
         limite = float(input('O limite para sua nova conta: '))
-        contas.append(conta_banco(nome, saldo, limite, []))
+        nome_existente = any(conta.titular == nome for conta in contas)
+        if nome_existente:
+            print('\033[1;31mEste nome já está sendo utilizado!\033[m\nDigite um nome diferente para realizar o cadastro.')
+        else:
+            contas.append(conta_banco(nome, saldo, limite, []))
+            print(f'\033[1;32mConta criada com sucesso para {nome}!\033[m')
 
     elif resposta == '2':
         titular = str(input('Insira o nome do titular da conta: '))

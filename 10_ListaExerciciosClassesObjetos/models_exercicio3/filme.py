@@ -13,5 +13,5 @@ class filme:
 
     def exibir_informacoes(self):
         print(
-            f'O filme {self.titulo}, do genênero de {self.genero}, com duração de \n aproximadamente {self.duracao} minutos, recebeu a nota de {self.avaliacao}'
+            f'O filme {self.titulo}, do gênero de {self.genero}, com duração de \naproximadamente {self.duracao} minutos, recebeu a nota de {self.avaliacao}'
         )

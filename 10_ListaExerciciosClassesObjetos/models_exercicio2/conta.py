@@ -10,12 +10,13 @@ class conta_banco:
 
     '''
 
-    def __init__(self, titular, saldo, limite, historico):
+    def __init__(self, titular, saldo, limite, historico, chave_pix):
 
         self.titular = titular
         self.saldo = saldo
         self.limite = limite
         self.historico = historico 
+        self.chave_pix = chave_pix
 
         '''
         Construtor da classe conta_banco

@@ -1,61 +1,23 @@
 class Veiculos:
 
-    def __init__(self, modelo, marca, placa, ano, cor, velocidade, latitude, longitude):
-        self.modelo = modelo
-        self.marca = marca
-        self.placa = placa
-        self.ano = ano
-        self.cor = cor
-        self.velocidade = velocidade
-        self.latitude = latitude
-        self.longitude = longitude
+    def __init__(self, placa: str, modelo: str, marca: str, ano: int, cor: str, valor_fipe: float) -> None:
+        self.__placa = placa
+        self.__modelo = modelo
+        self.__marca = marca
+        self.__ano = ano
+        self.__cor = cor
+        self.__valor_fipe = valor_fipe
 
-    def acelerar(self):
-        self.velocidade += 10
-        nova_latitude = self.latitude + 1
-        self.alterar_latitude(nova_latitude)
-        print(
-            f'O carro de placa {self.placa} foi acelerado até {self.velocidade} km/h')
+    def __str__(self) -> str:
+        '''Retorna uma string com as informações do veículo'''
+        infos = f"Placa: {self.__placa}\n"
+        infos += f"Modelo: {self.__modelo}\n"
+        infos += f"Marca: {self.__marca}\n"
+        infos += f"Ano: {self.__ano}\n"
+        infos += f"Cor: {self.__cor}\n"
+        infos += f"Valor_Fipe: {self.__valor_fipe}\n"
+        return infos
 
-    def frenar(self):
-
-        if self.velocidade >= 10:
-            self.velocidade -= 10
-
-    def mostrarInfos(self):
-
-        print(
-            f"O veículo {self.modelo}, de placa {self.placa} está a {self.velocidade} km/h")
-        print(f"Lat: {self.latitude}, long: {self.longitude}")
-
-    def alterar_placa(self, placa):
-
-        self.placa = placa
-
-    def alterar_modelo(self, modelo):
-
-        self.modelo = modelo
-
-    def alterar_marca(self, marca):
-
-        self.marca = marca
-
-    def alterar_ano(self, ano):
-
-        self.ano = ano
-
-    def alterar_cor(self, cor):
-
-        self.cor = cor
-
-    def alterar_velocidade(self, velocidade):
-
-        self.velocidade = velocidade
-
-    def alterar_latitude(self, latitude):
-
-        self.latitude = latitude
-
-    def alterar_longitude(self, longitude):
-
-        self.longitude = longitude
+    def getPlaca(self) -> str:
+        ''' Retorna a placa do veículo'''
+        return self.__placa

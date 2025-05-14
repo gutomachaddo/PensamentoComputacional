@@ -126,17 +126,20 @@ while resposta != '11':
             if conta.titular == titular:
                 if len(conta.chave_pix) == 2:
                     print('Esta conta já possui 2 chaves PIX!')
+                    encontrado = True
                 else:
                     pix1 = str(input('DIGITE O N° DE TELEFONE OU E-MAIL PARA CRIAR A CHAVE: '))
                     conta.chave_pix.append(pix1)
                     if len(conta.chave_pix) > 1:
                         print('CHAVE PIX CRIADA COM SUCESSO!\nATINGIDO O LIMITE DE CHAVES.')
+                        encontrado = True
                     else:
                         resposta2 = str(input('DESEJA ADICIONAR OUTRA CHAVE? DIGITE:\n(s) PARA SIM\n(n) PARA NÃO\n----->'))
                         if resposta2 == 's':
                             pix2 = str(input('Insira a outra chave (TELEFONE ou E-MAIL): '))
                             conta.chave_pix.append(pix2)
                             print('CHAVES CRIADAS COM SUCESSO!')
+                            ecnontrado = True
                         else:
                             print('CHAVE PIX CRIADA!\nSERVIÇO ENCERRADO.')
                             encontrado = True

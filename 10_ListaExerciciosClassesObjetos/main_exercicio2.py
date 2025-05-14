@@ -1,8 +1,8 @@
 from models_exercicio2.conta import conta_banco
 from time import sleep
 
-guilherme = conta_banco('Guilherme', 1000, 500, [], ['guilherme@gmail.com', '51995306078'])
-pedro = conta_banco('Pedro', 500, 300, [], ['51995368540'])
+guilherme = conta_banco('Guilherme', 1000, 500, [], ['1', '2'])
+pedro = conta_banco('Pedro', 500, 300, [], ['3'])
 contas = [pedro, guilherme]
 resposta = ''
 
@@ -150,6 +150,7 @@ while resposta != '11':
         for conta in contas:
             if conta.titular == titular:
                 print(f'Suas chaves PIX são essas:\n{conta.chave_pix}')
+                encontrado = True
         if not encontrado:
             print('Conta Inexistente')
     
@@ -165,8 +166,7 @@ while resposta != '11':
                 conta_destino = conta
                 if conta_envio and conta_destino:
                     pix = str(input('Insira a chave PIX da pessoa: '))
-                    chave_existente = any(conta_destino.chave_pix == pix for conta_destino in contas)
-                    if chave_existente:
+                    if pix in conta_destino.chave_pix:
                         valor = float(input('VALOR DO PIX: R$ '))
                         conta_envio.transferir(conta_destino, valor)
                         print('PIX FEITO!')

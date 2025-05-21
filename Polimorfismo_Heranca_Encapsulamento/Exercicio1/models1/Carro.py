@@ -11,12 +11,12 @@ class carro(Veiculo):
         self.__litros_gastos = litros_gastos
     
     def calcular_consumo(self, distancia):
-        self.__litros_gastos = self.__consumo * distancia
+        self.__litros_gastos = distancia / self.__consumo 
     
     def __str__(self):
         infor = super().__str__()
         infor += f'Consumo: {self.__consumo} km/l\n'
-        infor += f'Litros gastos na viagem: {self.__litros_gastos} litros'
+        infor += f'Litros gastos na viagem: {self.__litros_gastos} litro(s)'
         return infor
 
         

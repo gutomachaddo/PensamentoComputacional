@@ -13,16 +13,16 @@ xj6 = moto('LKM3OP08', 'XJ6', 'YAMAHA', 2009,
 
 print(Fox)
 distancia = int(input('Informe a distancia que o carro irá percorrer: '))
-Fox.calcular_consumo(12)
+Fox.calcular_consumo(distancia)
 print(Fox)
 
 print(xj6)
 distancia = int(input('Informe a distancia que o carro irá percorrer: '))
-xj6.calcular_consumo(12)
+xj6.calcular_consumo(distancia)
 print(xj6)
 
 print(fh)
 distancia = int(input('Informe a distancia que o carro irá percorrer: '))
-fh.calcular_consumo(12)
+fh.calcular_consumo(distancia)
 print(fh)
 

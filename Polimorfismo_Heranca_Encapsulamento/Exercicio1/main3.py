@@ -8,7 +8,7 @@ if __name__ == "__main__":
     eletrico = VeiculoEletrico("BYD Dolphin", 0.15, 60)
 
     veiculos = [hb20, xj6, eletrico]
-    distancia_teste = 100  # km
+    distancia_teste = 100  
 
     print("--- Cálculo de Consumo para Diferentes Veículos ---")
     for veiculo in veiculos:

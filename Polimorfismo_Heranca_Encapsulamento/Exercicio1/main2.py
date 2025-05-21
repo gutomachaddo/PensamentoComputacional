@@ -5,7 +5,7 @@ from models2.moto import moto
 
 Fox = carro('ACD9D47', 'Fox', 12, 4)
 xj6 = moto('FCL9D39', 'XJ6', 20, 600)
-sedan = carro('JKL5D52', 'Sedan X', 13, 4)
+sedan = carro('JKL5D52', 'HB20', 13, 4)
 k_ninja = moto('LMN5D25', 'Kawasaki Ninja', 22, 650)
 
 frota = frota()

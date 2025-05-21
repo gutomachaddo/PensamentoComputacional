@@ -1,6 +1,6 @@
 # Importando as classes necessárias
 from models.Veiculos import Veiculos
-from models.CarroCombustao import CarroCombustao
+from models.CarrosCombustao import CarroCombustao
 from models.CarroEletrico import CarroEletrico
 from models.CarroConvEletrico import CarroConvEletrico
 

@@ -20,5 +20,14 @@ class frota:
             veiculo.exibir_informacoes()
             print('-'*10)
         
+    def calcular_consumo_total(self, distancia):
+        consumo_total = 0
+        for veiculo in self.__veiculos:
+            consumo = veiculo.calcular_consumo(distancia)
+            consumo_total += consumo
+        return consumo_total
+    
+
+        
     
     

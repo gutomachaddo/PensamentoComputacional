@@ -11,10 +11,8 @@ class Veiculo:
         print(f'CONSUMO: {self.__consumo}')
     
     def calcular_consumo(self, distancia):
-        try:
-            return distancia / self.__consumo
-        except ZeroDivisionError:
-            return print('Divisão por zero!')
+        return distancia / self.__consumo
+ 
 
 
     

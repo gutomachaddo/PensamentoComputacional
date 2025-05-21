@@ -8,5 +8,5 @@ class moto(Veiculo):
 
     def exibir_informacoes(self):
         super().exibir_informacoes()
-        infor += f'N° CILINDRADAS: {self.__cilindradas}'
+        print(f'N° CILINDRADAS: {self.__cilindradas}')
         

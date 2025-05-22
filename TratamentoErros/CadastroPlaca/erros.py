@@ -1,0 +1,2 @@
+class PlacaInvalida(Exception):
+    pass

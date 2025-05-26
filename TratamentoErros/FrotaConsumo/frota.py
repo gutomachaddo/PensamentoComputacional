@@ -1,4 +1,4 @@
-from FrotaConsumo.veiculos import Veiculo
+from TratamentoErros.FrotaConsumo.veiculo import Veiculo
 
 class frota:
     def __init__(self):

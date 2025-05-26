@@ -1,10 +1,6 @@
-from FrotaConsumo.veiculos import Veiculo
+from .veiculo import Veiculo
 
-class carro(Veiculo):
-    def __init__(self, placa, nome_veiculo, consumo, num_portas):
-        super().__init__(placa, nome_veiculo, consumo)
-        self.__num_portas = num_portas
-
-    def exibir_informacoes(self):
-        super().exibir_informacoes()
-        print(f'N° PORTAS: {self.__num_portas}')
+class Carro(Veiculo):
+    def calcular_consumo(self, distancia):
+        consumo_por_km = 12 
+        return distancia / consumo_por_km

@@ -4,16 +4,16 @@ from models_sistema.ProdutoAlimenticio import ProdutoAlimenticio
 from models_sistema.ProdutoEletronico import ProdutoEletronico
 
 try:
-    nome = input('Digite o nome do produto: ')
-    preco = float(input('Digite o preço atual do produto: '))
-    classe = input('Digite a classe (ELETRÔNICO/ ALIMENTO): ').strip().lower()
+    nome = input('\033[1;32mDigite o nome do produto: \033[m')
+    preco = float(input('\033[1;32mDigite o preço atual do produto: \033[m'))
+    classe = input('\033[1;32mDigite a classe (ELETRÔNICO/ ALIMENTO): \033[m').strip().lower()
 
     if classe == "alimento":
-        tipo = input('Digite o tipo (REGULADOR/ CONSTRUTOR/ ENERGÉTICO): ')
+        tipo = input('\033[1;32mDigite o tipo (REGULADOR/ CONSTRUTOR/ ENERGÉTICO): \033[m')
         produto = ProdutoAlimenticio(nome, preco, tipo)
     
     elif classe == 'eletronico':
-        tipo = input('Digite o tipo (COMPUTADOR/ CELULAR/ TABLET): ')
+        tipo = input('\033[1;32mDigite o tipo (COMPUTADOR/ CELULAR/ TABLET): \033[m')
         produto = ProdutoEletronico(nome, preco, tipo)
     
     else:

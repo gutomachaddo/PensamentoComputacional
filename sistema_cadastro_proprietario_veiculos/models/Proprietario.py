@@ -1,0 +1,2 @@
+class Proprietario():
+    pass

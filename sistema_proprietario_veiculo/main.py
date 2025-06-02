@@ -45,7 +45,7 @@ class SistemaVeiculos:
         self.configurar_tela_principal()
         self.configurar_tela_cadastro()
         self.configurar_tela_cadastro_proprietario()
-        self.configurar_tela_listar_proprietario()
+        self.configurar_tela_listagem_proprietario()
         self.configurar_tela_listagem()
         
         # Mostrar a tela principal
@@ -257,7 +257,7 @@ class SistemaVeiculos:
                 command=lambda: self.mostrar_tela(self.tela_principal)).pack(side="left", padx=5)
         
 
-    def configurar_tela_listar_proprietario(self):
+    def configurar_tela_listagem_proprietario(self):
         # Título
         titulo = tk.Label(self.listar_proprietario, text="PROPRIETÁRIOS CADASTRADOS", font=("Arial", 16, "bold"))
         titulo.pack(pady=20)
@@ -341,12 +341,11 @@ class SistemaVeiculos:
         self.mostrar_tela(self.tela_principal)
 
 
-    # Método para atualizar a lista de proprietários na tela de listagem
     def atualizar_listagem_proprietarios(self):
-        # Atualizar os nomes no combobox
+        # Atualizar os nomes dos proprietários
         self.filtro_combo['values'] = ["Todos"] + [p.get_nome() for p in self.proprietarios]
         self.filtro_var_proprietario.set("Todos")
-        # Limpar a listbox
+        # Limpar a lista
         self.listbox_proprietario.delete(0, "end")
         for proprietario in self.proprietarios:
             self.listbox_proprietario.insert("end", str(proprietario))

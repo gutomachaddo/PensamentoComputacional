@@ -315,7 +315,7 @@ class SistemaVeiculos:
             return
 
         # Verificar se o CPF já está cadastrado
-        if any(p.get_cpf() == cpf for p in self.proprietarios):
+        if any(prop.get_cpf() == cpf for prop in self.proprietarios):
             messagebox.showwarning("CPF já cadastrado", "Proprietário já existente com esse CPF.")
             return
         

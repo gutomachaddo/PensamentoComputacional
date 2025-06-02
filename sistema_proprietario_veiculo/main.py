@@ -313,12 +313,7 @@ class SistemaVeiculos:
         if not re.match(r'^\d{3}\.\d{3}\.\d{3}-\d{2}$', cpf):
             messagebox.showwarning("CPF INVÁLIDO", "O CPF deve conter pontos (.) e traço (-)")
             return
-
-        # Verificar se o CPF já está cadastrado
-        if any(prop.get_cpf() == cpf for prop in self.proprietarios):
-            messagebox.showwarning("CPF já cadastrado", "Proprietário já existente com esse CPF.")
-            return
-        
+    
         # Validar placa
         if not re.match(r'^[A-Z]{3}[0-9][0-9A-Z][0-9]{2}$', placa):
             messagebox.showwarning("Placa inválida", "A placa deve seguir o padrão ABC1D23 ou ABC1234")

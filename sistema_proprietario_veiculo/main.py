@@ -308,17 +308,16 @@ class SistemaVeiculos:
         if not any(veiculo.get_placa() == placa for veiculo in self.veiculos):
             messagebox.showwarning("Placa não encontrada", "Deve haver algum veículo cadastrado com esta placa!.")
             return
-
+        
         # Validar CPF
         if not re.match(r'^\d{3}\.\d{3}\.\d{3}-\d{2}$', cpf):
             messagebox.showwarning("CPF INVÁLIDO", "O CPF deve conter pontos (.) e traço (-)")
             return
-    
+        
         # Validar placa
         if not re.match(r'^[A-Z]{3}[0-9][0-9A-Z][0-9]{2}$', placa):
             messagebox.showwarning("Placa inválida", "A placa deve seguir o padrão ABC1D23 ou ABC1234")
             return
-        
         
         # Criacao proprietario
         proprietario = Proprietario(nome, cpf, [placa])

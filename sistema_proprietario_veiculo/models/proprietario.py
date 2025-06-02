@@ -1,6 +1,4 @@
-import re
-import tkinter as tk
-from tkinter import ttk, messagebox
+
 
 class Proprietario:
     def __init__(self, nome, cpf, placas):
@@ -18,7 +16,7 @@ class Proprietario:
     
     def get_placas(self):
         return self.__placas
-
+    
     def adicionar_veiculo(self, placa):
         placa = placa.upper()
         if self.validar_placa(placa):

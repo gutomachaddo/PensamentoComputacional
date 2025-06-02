@@ -301,27 +301,27 @@ class SistemaVeiculos:
 
         # Campos obrigatórios
         if not nome or not cpf or not placa:
-            messagebox.showwarning("Dados incompletos", "Preencha todos os campos obrigatórios!")
+            messagebox.showwarning("Dados insuficientes", "Preencha todos os campos para salvar o proprietário!")
             return
 
         # Verificar se a placa existe nos veiculos cadastrados
         if not any(veiculo.get_placa() == placa for veiculo in self.veiculos):
-            messagebox.showwarning("Placa não encontrada", "Cadastre primeiro o veículo com essa placa.")
+            messagebox.showwarning("Placa não encontrada", "Deve haver algum veículo cadastrado com esta placa!.")
             return
 
         # Validar CPF
         if not re.match(r'^\d{3}\.\d{3}\.\d{3}-\d{2}$', cpf):
-            messagebox.showwarning("CPF inválido", "O CPF deve ser digitado corretamente")
+            messagebox.showwarning("CPF INVÁLIDO", "O CPF deve conter pontos (.) e traço (-)")
             return
 
         # Verificar se o CPF já está cadastrado
         if any(p.get_cpf() == cpf for p in self.proprietarios):
-            messagebox.showwarning("CPF já cadastrado", "Já existe um proprietário com esse CPF.")
+            messagebox.showwarning("CPF já cadastrado", "Proprietário já existente com esse CPF.")
             return
         
         # Validar placa
         if not re.match(r'^[A-Z]{3}[0-9][0-9A-Z][0-9]{2}$', placa):
-            messagebox.showwarning("Placa inválida", "A placa deve seguir o padrão ABC1234 ou ABC1D23")
+            messagebox.showwarning("Placa inválida", "A placa deve seguir o padrão ABC1D23 ou ABC1234")
             return
         
         
@@ -330,7 +330,7 @@ class SistemaVeiculos:
 
         # Add proprietario lista
         self.proprietarios.append(proprietario)
-        messagebox.showinfo("Sucesso", "Proprietário cadastrado com sucesso!")
+        messagebox.showinfo("Sucesso", "O proprietário foi cadastrado com sucesso!")
 
         # Limpar campos
         self.nome_entry.delete(0, "end")

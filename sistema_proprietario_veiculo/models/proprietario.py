@@ -1,5 +1,3 @@
-
-
 class Proprietario:
     def __init__(self, nome, cpf, placas):
         self.__nome = nome

@@ -1,12 +1,11 @@
 # No main somente a logica!!!
+i= 0
 
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-from models import Usuario
+from models.models import Usuario, Base
 
-# Base para nossos modelos
-Base = declarative_base()
 
 # Conectar ao banco
 engine = create_engine('sqlite:///database.db')
@@ -46,3 +45,5 @@ if __name__ == '__main__':
     print("Meu primeiro banco de dados!")
     novo_usuario = criar_usuario(nome="Nicolau", idade=18)
     print(novo_usuario)
+    for i in buscar_todos_usuarios():
+        print(i)
